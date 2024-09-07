@@ -1,0 +1,152 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set Panno Sign Negative as the primary font */
+body {
+    font-family: 'panno-sign-negative', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* Center content and add padding */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Style the header */
+header {
+    background-color: #2a2a2a;
+    color: #fff;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style the brand logo */
+header h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+/* Style the navigation bar */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    padding: 10px 20px;
+    background-color: #1e90ff;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1c7cd6;
+    cursor: pointer;
+}
+
+/* Style the main content */
+main {
+    background-color: #fff;
+    padding: 40px;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+main h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+main p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Style buttons within the main content */
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #1e90ff;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #1c7cd6;
+    cursor: pointer;
+}
+
+/* Footer styles */
+footer {
+    background-color: #2a2a2a;
+    color: #fff;
+    padding: 30px;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Footer link styles */
+footer a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #3ca6ff;
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 768px) {
+    header, main, footer {
+        padding: 20px;
+    }
+
+    header nav {
+        display: block;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav a {
+        margin-top: 10px;
+    }
+
+    main h2 {
+        font-size: 24px;
+    }
+
+    main p {
+        font-size: 16px;
+    }
+}
