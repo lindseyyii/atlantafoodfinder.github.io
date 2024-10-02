@@ -7,61 +7,134 @@
 
 /* Set Panno Sign Negative as the primary font */
 body {
-    font-family: 'panno-sign-negative', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    background-color: #f4f6f9;
-    color: #333;
+    font-family: "Gothic A1", Helvetica, Arial, serif; /* Font for the whole page */
+    line-height: 1.6; /* Improve readability */
+    margin: 20px; /* Add margin for the entire website */
+    padding: 0; /* Remove default padding */
 }
 
-/* Center content and add padding */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-/* Style the header */
+/* Header Styles */
 header {
-    background-color: #2a2a2a;
-    color: #fff;
-    padding: 20px 40px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: whitesmoke; /* Light background for the header */
+    color: #fff; /* White text color */
+    padding: 20px 40px; /* Reduced padding for header */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    display: flex; /* Flex layout for header */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Center items vertically */
+}
+
+/* Logo Container */
+.logo-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    margin-right: 20px; /* Space between logo and nav */
+    padding: 0; /* Remove padding to tighten space */
 }
 
-/* Style the brand logo */
-header h1 {
-    font-size: 36px;
-    font-weight: 600;
+.logo-container img {
+    max-width: 250px; /* Adjust the size of the logo */
+    height: auto; /* Maintain aspect ratio */
 }
 
-/* Style the navigation bar */
+/* Navigation Bar */
 nav ul {
-    list-style-type: none;
-    display: flex;
-    gap: 15px;
+    list-style-type: none; /* Remove default list style */
+    display: flex; /* Flex layout for navigation items */
+    gap: 15px; /* Space between nav items */
 }
 
+/* Navigation Links */
 nav ul li a {
-    padding: 10px 20px;
-    background-color: #1e90ff;
-    color: white;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+    font: 400 16px/1.25 "Gothic A1", Helvetica, Arial, serif; /* Font for navigation links */
+    text-decoration: none; /* Remove underline from links */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center text vertically */
+    padding: 10px 16px; /* Reduced padding for buttons */
+    border-radius: 30.51px; /* Rounded corners */
+    color: rgb(0, 0, 0); /* Text color should be black */
+    outline: 5px solid rgb(156, 82, 116);
+    background-color: whitesmoke; /* Background color */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
+/* Navigation Links Hover Effect */
 nav ul li a:hover {
-    background-color: #1c7cd6;
-    cursor: pointer;
+    background-color: rgb(156, 82, 116); /* Background color on hover */
+    color: #fff; /* Text color changes to white on hover */
 }
 
+/* Hero Section Styles */
+.hero {
+    background-image: url('css/images/logo.png'); /* Add a suitable background image */
+    background-size: cover;
+    background-position: center;
+    color: rgb(0, 0, 0); /* Text color */
+    text-align: center;
+    padding: 80px 20px; /* Adjust padding for better spacing */
+    margin-bottom: 30px; /* Space between hero and main content */
+    border-radius: 8px; /* Rounded corners for hero section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 1.5s forwards; /* Fade-in animation */
+}
+
+.hero-content h2 {
+    font-size: 36px; /* Font size for main heading */
+    margin-bottom: 20px; /* Space between heading and paragraph */
+    transform: translateY(-20px); /* Move up for entrance animation */
+    opacity: 0; /* Start hidden for animation */
+    animation: slideIn 1s forwards 0.5s; /* Slide-in animation with delay */
+}
+
+.hero-content p {
+    font-size: 18px; /* Font size for paragraph */
+    margin-bottom: 30px; /* Space below paragraph */
+    transform: translateY(-20px); /* Move up for entrance animation */
+    opacity: 0; /* Start hidden for animation */
+    animation: slideIn 1s forwards 1s; /* Slide-in animation with delay */
+}
+
+/* Style the button in the hero section */
+.hero .button {
+    text-decoration: none;
+    padding: 12px 24px; /* Adjusted padding */
+    background-color: #5ab19b; /* Consistent button color */
+    color: white; /* Button text color */
+    border-radius: 50px; /* Rounded design */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transition for hover effect */
+    transform: translateY(10px); /* Initial position for button */
+    opacity: 0; /* Start hidden for animation */
+    animation: slideIn 1s forwards 1.5s; /* Slide-in animation with delay */
+}
+
+/* Button hover effect */
+.hero .button:hover {
+    background-color: #3f8e7e; /* Darker shade on hover */
+    transform: translateY(0); /* Move button up on hover */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    to {
+        transform: translateY(0); /* Return to original position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px; /* Padding for main content */
+}
 /* Style the main content */
 main {
     background-color: #fff;
